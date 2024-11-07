@@ -1,0 +1,3 @@
+#Piškvorky (Tic-Tac-Toe) Tým Členové týmu: Jiří Horváth Lukas Novak Jaroslav Klaudy Technologie Tato aplikace je postavena na následujících technologiích:
+
+Frontend: React.js CSS (nebo SCSS) React Router Backend: Node.js Express.js pro API SQL Testování: Jest (pro automatizované testy)
