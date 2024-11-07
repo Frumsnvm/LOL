@@ -1,0 +1,11 @@
+$primary-color: blue;
+
+.container {
+    width: 100%;
+    background-color: $primary-color;
+
+    .child {
+        margin: 10px;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,70 @@
+openapi: 3.0.0
+info:
+  title: Piškvorky API
+  version: 1.0.0
+paths:
+  /games:
+    post:
+      summary: Vytvoření nové hry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                player1:
+                  type: string
+                player2:
+                  type: string
+      responses:
+        '201':
+          description: Hra byla vytvořena
+    get:
+      summary: Získání všech her
+      responses:
+        '200':
+          description: Seznam her
+          
+  /games/{id}:
+    get:
+      summary: Získání jedné hry
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: ID hry
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Hra byla nalezena
+        '404':
+          description: Hra nebyla nalezena
+    put:
+      summary: Aktualizace hry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                player1:
+                  type: string
+                player2:
+                  type: string
+                gameState:
+                  type: string
+      responses:
+        '200':
+          description: Hra byla aktualizována
+        '404':
+          description: Hra nebyla nalezena
+    delete:
+      summary: Mazání hry
+      responses:
+        '200':
+          description: Hra byla smazána
+        '404':
+          description: Hra nebyla nalezena
